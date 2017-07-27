@@ -1,5 +1,11 @@
+import groovy.json.JsonSlurper
+
 task hello {
     doLast {
         println 'Hello world!'
     }
+}
+
+task callweb {
+    def p = ['curl', "\"http://auto:c7ae031e380125a34cab6303d8202cf4@localhost:8080/job/test-script/build?token=testjob\""].execute()
 }
