@@ -9,7 +9,7 @@ task hello {
 task callweb {
     doLast{
         println 'Before Call!'
-        ['curl', "\"http://auto:c7ae031e380125a34cab6303d8202cf4@localhost:8080/job/test-script/build?token=testjob\""].execute()
+        "curl http://auto:c7ae031e380125a34cab6303d8202cf4@localhost:8080/job/test-script/build?token=testjob".execute()
          println 'Hello world!'
      }
 }
